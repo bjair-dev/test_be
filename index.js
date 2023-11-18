@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mysql = require('mysql');
 const router = express.Router();
@@ -12,6 +11,10 @@ const db = mysql.createConnection({
   database: 'bd_cuota',
 });
 
+
+
+
+
 // Conexión a la base de datos
 db.connect((err) => {
   if (err) {
@@ -23,14 +26,14 @@ db.connect((err) => {
 
 // Ruta para probar la conexión
 
-/* var http = require('http');
+var http = require('http');
 var server = http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     var message = 'It works!\n',
         version = 'NodeJS ' + process.versions.node + '\n',
         response = [message, version].join('\n');
     res.end(response);
-}); */
+});
 
 
 router.get('/', (req, res) => {
@@ -41,4 +44,4 @@ router.get('/dbTest', (req, res) => {
   res.send('Conexión exitosa a la base de datos desde /dbtest');
 });
 
-module.exports = router;
+module.exports = router; */
